@@ -64,8 +64,8 @@ This is a Python-based web application that blocks YouTube access on a Windows s
 ## Usage
 
 - Navigate to http://127.0.0.1:8000 in your web browser.
-- Enter the children's password to unlock YouTube for a limited time (1 hour) after one hour it will automatically .
-- Enter the self password to unlock YouTube indefinitely.
+- Enter the children's password to unlock YouTube for a limited time (1 hour) after one hour it will automatically. Deafult password for children 12345
+- Enter the self password to unlock YouTube indefinitely. Default password for parents 54321.
 
 ### Set password
 - p1.txt used to store password for childrens
