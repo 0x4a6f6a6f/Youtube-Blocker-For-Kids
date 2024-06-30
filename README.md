@@ -47,7 +47,7 @@ This is a Python-based web application that blocks YouTube access on a Windows s
 
 - Download project as Zip
 - Unzip the project
-- Navigate to App folder > youtubeBlocker folder.
+- Navigate to Release folder > youtubeBlocker folder.
 - Locate the youtubeBlocker.exe file
 - Right-click on the youtubeBlocker.exe file: Right-click on the executable file and select "Properties" from the context menu.
 - Open the Properties window:
