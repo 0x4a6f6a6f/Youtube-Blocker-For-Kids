@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Children Unlocked Access</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        .timer {
+            font-size: 3em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h2>YouTube Unblocked</h2>
+    <a href="https://www.youtube.com">Go to YouTube</a>
+    <p>Enjoy your one-hour access!</p>
+    <img src="{{ url_for('static', filename='yay.webp') }}" alt="Restricted">
+    <p>Time remaining:</p>
+    <div id="timer" class="timer">{{ remaining_time }}</div>
+    <script>
+        // Countdown timer logic
+        var seconds = {{ remaining_time }} * 60; // Convert minutes to seconds
+        var timerDisplay = document.getElementById('timer');
+
+        function countdown() {
+            var minutes = Math.floor(seconds / 60);
+            var remainingSeconds = seconds % 60;
+
+            timerDisplay.innerHTML = minutes + ":" + (remainingSeconds < 10 ? "0" : "") + remainingSeconds;
+
+            if (seconds <= 0) {
+                clearInterval(timerInterval);
+                timerDisplay.innerHTML = "Time's up!";
+                // You can add additional logic here when time is up
+            } else {
+                seconds--;
+            }
+        }
+
+        var timerInterval = setInterval(countdown, 1000); // Update every second
+    </script>
+</body>
+</html>
